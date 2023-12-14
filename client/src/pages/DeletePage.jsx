@@ -1,4 +1,4 @@
-import DeleteAppt from "../components/DeleteAppt";
+import DeleteAppt from '../components/DeleteAppt';
 
 const DeletePage = () => {
   return (
