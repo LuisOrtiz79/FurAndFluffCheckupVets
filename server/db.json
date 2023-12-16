@@ -3,16 +3,18 @@
     {
       "name": "loki",
       "specie": "reptile",
+      "gender": "male",
       "date": "january 2022",
       "phone": "134-239-5426",
       "email": "temp@email.com",
-      "description": "checkup",
+      "description": "care",
       "owner": "odin",
       "id": 1
     },
     {
       "name": "thor",
       "specie": "dog",
+      "gender": "male",
       "date": "january 2022",
       "phone": "134-239-5426",
       "email": "temp@email.com",
@@ -23,6 +25,7 @@
     {
       "name": "hella",
       "specie": "cat",
+      "gender": "female",
       "date": "january 2022",
       "phone": "134-239-5426",
       "email": "temp@email.com",
@@ -33,11 +36,12 @@
     {
       "name": "athena",
       "specie": "bird",
+      "gender": "female",
       "date": "january 2023",
       "phone": "134-367-2485",
       "email": "temp1@email.com",
       "description": "care",
-      "owner": "odin",
+      "owner": "zeus",
       "id": 4
     }
   ]

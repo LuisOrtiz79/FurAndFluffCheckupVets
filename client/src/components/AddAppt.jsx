@@ -9,6 +9,7 @@ const AddAppt = () => {
   const [newAppt, setNewAppt] = useState({
     name: "",
     specie: "",
+    gender: "",
     date: "",
     phone: "",
     email: "",
@@ -27,6 +28,7 @@ const AddAppt = () => {
       .post(API_URL + '/appointment/' + '?_embed=', {
         name: newAppt.name,
         specie: newAppt.specie,
+        gender: newAppt.gender,
         date: newAppt.date,
         phone: newAppt.phone,
         email: newAppt.email,
@@ -39,6 +41,7 @@ const AddAppt = () => {
         setNewAppt({
           name: "",
           specie: "",
+          gender: "",
           date: "",
           phone: "",
           email: "",
@@ -54,12 +57,12 @@ const AddAppt = () => {
     <div className='AddAppt'>
       <form onSubmit={handleSubmit}>
           <label>
-            Name
+            Name:
             <input name='name' type='text' placeholder='Name' value={newAppt.name} onChange={handleTextInput} />
           </label>
 
           <label>
-            Specie
+            Specie:
             <select name='specie' value={newAppt.specie} onChange={handleTextInput} >
               <option value=''>-- None --</option>
               <option value='dog'>Dog</option>
@@ -69,25 +72,32 @@ const AddAppt = () => {
               <option value='reptile'>Reptile</option>
               <option value='hamster'>Hamster</option>
             </select>
+
+            Gender:
+            <select name='gender' value={newAppt.gender} onChange={handleTextInput} >
+              <option value=''>-- None --</option>
+              <option value='male'>Male</option>
+              <option value='female'>Female</option>
+            </select>
           </label>
 
           <label>
-            Date
+            Date:
             <input name='date' type='text' placeholder='Date' value={newAppt.date} onChange={handleTextInput} />
           </label>
 
           <label>
-            Phone
+            Phone:
             <input name='phone' type='text' placeholder='Phone' value={newAppt.phone} onChange={handleTextInput} />
           </label>
 
           <label>
-            Email
+            Email:
             <input name='email' type='text' placeholder='Email' value={newAppt.email} onChange={handleTextInput} />
           </label>
 
           <label>
-            Description
+            Description:
             <select name='description' value={newAppt.description} onChange={handleTextInput} >
               <option value=''>-- None --</option>
               <option value='checkup'>Checkup</option>
@@ -96,11 +106,11 @@ const AddAppt = () => {
           </label>
 
           <label>
-            Owner
+            Owner:
             <input name='owner' type='text' placeholder='Owner Name' value={newAppt.owner} onChange={handleTextInput} />
           </label>
 
-          <button type='submit'>Add Appointment</button>
+          <button type='submit'>Add</button>
         </form>
     </div>
   )

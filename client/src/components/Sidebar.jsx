@@ -3,11 +3,20 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <Link to='/addAppointments'>Add Appointment</Link>
+      <ul>
+        <li>
+          <Link to='/addAppointments'>Add Appointment</Link>
+        </li>
 
-      <Link to='/updateAppointments'>Update Appointments</Link>
-      
-      <Link to='/deleteAppointments'>Delete Appointment</Link> 
+        <li>
+          <Link to='/updateAppointments'>Edit Appointments</Link>
+        </li>
+
+        <li>
+          <Link to='/deleteAppointments'>Delete Appointment</Link> 
+        </li>
+      </ul>
+
     </div>
   )
 }

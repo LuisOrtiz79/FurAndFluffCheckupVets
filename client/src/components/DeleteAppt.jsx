@@ -33,12 +33,11 @@ const DeleteAppt = () => {
           return (
             <div key={index}>
               <div className='sticky-note'>
-                <h1>{appt.name}</h1>
-                <p>{appt.specie}</p>
-                <p>{appt.date}</p>
+                <h2>{appt.name}</h2>
                 <p>{appt.description}</p>
+                <p>{appt.date}</p>
 
-                <button onClick={() => handleDelete(appt.id)}>Delete</button>
+                <button id='buttons1' className='buttons' onClick={() => handleDelete(appt.id)}>Delete</button>
               </div>
             </div>
           )

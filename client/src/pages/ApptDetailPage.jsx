@@ -22,18 +22,19 @@ const ApptDetailPage = () => {
   }, []);
 
   return (
-    <div className='details'>
+    <div className='detailsPage'>
       {appt && (
         <>
             <h1>{appt.name}</h1>
             <p>Specie: {appt.specie}</p>
+            <p>Gender: {appt.gender}</p>
             <p>Date: {appt.date}</p>
             <p>Phone: {appt.phone}</p>
             <p>Email: {appt.email}</p>
             <p>Description: {appt.description}</p>
             <p>Owner: {appt.owner}</p>
 
-            <button onClick={() => { navigate(-1) }}>Back</button>
+            <button className='buttons' onClick={() => { navigate(-1) }}>Back</button>
         </>
       )}
     </div>

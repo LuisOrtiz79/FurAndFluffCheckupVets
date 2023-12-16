@@ -8,6 +8,7 @@ const UpdateAppt = () => {
   const [editedAppt, setEditedAppt] = useState({
     name: "",
     specie: "",
+    gender: "",
     date: "",
     phone: "",
     email: "",
@@ -50,6 +51,7 @@ const UpdateAppt = () => {
       .put(API_URL + '/appointment/' + editedAppt.id, {
         name: editedAppt.name,
         specie: editedAppt.specie,
+        gender: editedAppt.gender,
         date: editedAppt.date,
         phone: editedAppt.phone,
         email: editedAppt.email,
@@ -70,18 +72,17 @@ const UpdateAppt = () => {
 
   return (
     <>{ !isEditing ?
-        <div className='updateAppt'>
+        <div className='appts'>
             {showAppt && 
               showAppt.map((appt, index) => {
                 return (
                   <div key={index}>
                     <div className='sticky-note'>
-                        <h1>{appt.name}</h1>
-                        <p>{appt.specie}</p>
-                        <p>{appt.date}</p>
+                        <h2>{appt.name}</h2>
                         <p>{appt.description}</p>
+                        <p>{appt.date}</p>
 
-                        <button onClick={() => handleEdit(appt.id)}>Edit</button>
+                        <button id='buttons1' className='buttons' onClick={() => handleEdit(appt.id)}>Edit</button>
                     </div>
                   </div>
                 )
@@ -105,7 +106,14 @@ const UpdateAppt = () => {
                     <option value='reptile'>Reptile</option>
                     <option value='hamster'>Hamster</option>
                 </select>
-            </label>
+
+                Gender:
+                <select name='gender' value={editedAppt.gender} onChange={handleTextInput} >
+                  <option value=''>-- None --</option>
+                  <option value='male'>Male</option>
+                  <option value='female'>Female</option>
+                </select>
+              </label>
     
             <label>
                 Date
@@ -135,8 +143,8 @@ const UpdateAppt = () => {
                 Owner
                 <input name='owner' type='text' placeholder='New Owner Name' value={editedAppt.owner} onChange={handleTextInput} />
             </label>
-    
-            <button type='submit'>Update Appointment</button>
+
+            <button type='submit'>Edit</button>
         </form>
     }
     </>

@@ -1,1 +1,206 @@
+/*navbar style */
+.navbar{
+    position: relative;
+    max-width: 99vw;
+    padding: 0px 30px;
+    height: 70px;
+    line-height: 70px;
+    margin: auto;
+    background: #92bde8;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 5vw;
+    list-style-type: none;
+    overflow: hidden;
+}
 
+.navbar li{
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar li a:hover{
+    color: blue;
+}
+
+/* homepage style */
+.homePage,
+.detailsPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*aboutPage style */
+.aboutPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutText {
+    width: 50vw;
+}
+
+/*apptsPage style */
+.app {
+    min-height: 98vh;
+    min-width: 98vw;
+}
+.appt-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.sidebar-appt {
+    padding-right: 10vw;
+    border-right: 5px solid rgba(0,0,0,.2);
+}
+
+.apptPage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*sidebar style */
+.sidebar ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 5vw;
+    list-style-type: none;
+    overflow: hidden;
+    padding-top: 5vh;
+}
+
+/* .sidebar li a {
+    display: block;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-bottom: 5px solid rgba(0,0,0,.2);
+} */
+
+.sidebar li a {
+    appearance: button;
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 10px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* addPage, updatePage, deletePage style */
+.updatePage,
+.addPage,
+.deletePage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* button style */
+.buttons{
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 10%;
+}
+
+#buttons1 {
+    width: 7vw;
+}
+
+.buttons:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.buttons:main,
+.buttons:focus {
+  user-select: auto;
+}
+
+.buttons:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.buttons:disabled {
+  cursor: auto;
+}
+
+.buttons:active {
+  border-width: 4px 0 0;
+  background: none;
+}
