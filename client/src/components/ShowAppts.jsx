@@ -26,8 +26,8 @@ const ShowAppts = () => {
                 <Link to={'/appointment/' + appt.id}>
                   <div className='sticky-note'>
                     <h2>{appt.name}</h2>
-                    <p>{appt.description}</p>
-                    <p>{appt.date}</p>
+                    <p>{appt.appointment}</p>
+                    <p>{appt.time} {appt.date}</p>
                   </div>
                 </Link> 
               </div>

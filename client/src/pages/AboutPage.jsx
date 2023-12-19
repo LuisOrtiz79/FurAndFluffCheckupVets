@@ -1,7 +1,13 @@
+import aboutLogo from '../assets/aboutPage-img.jpg';
+import facebookLogo from '../assets/facebook-logo.png';
+import twitterLogo from '../assets/twitter-logo.png';
+import instagramLogo from '../assets/instagram-logo.png';
+
 const AboutPage = () => {
   return (
     <div className='aboutPage'>
       <h1>About Us</h1>
+      <img src={aboutLogo} alt='aboutLogo' className='aboutLogo'/>
 
       <div className='aboutText'>
         <p>
@@ -31,9 +37,9 @@ const AboutPage = () => {
       <div className='aboutText1'>
         <h3>Follow us on:</h3>
 
-        <li>Facebook:</li>
-        <li>Twitter:</li>
-        <li>Instagram:</li>
+        <li>Facebook: <a href='#'><img src={facebookLogo} alt='FacebookLogo' className='facebookLogo' /></a></li>
+        <li>Twitter: <a href='#'><img src={twitterLogo} alt='TwitterLogo' className='twitterLogo' /></a></li>
+        <li>Instagram: <a href='#'><img src={instagramLogo} alt='InstagramLogo' className='instagramLogo' /></a></li>
       </div>
       
     </div>

@@ -24,18 +24,18 @@ const ApptDetailPage = () => {
   return (
     <div className='detailsPage'>
       {appt && (
-        <>
+        <div className='card'>
             <h1>{appt.name}</h1>
             <p>Specie: {appt.specie}</p>
             <p>Gender: {appt.gender}</p>
-            <p>Date: {appt.date}</p>
+            <p>Time: {appt.time} Date: {appt.date}</p>
             <p>Phone: {appt.phone}</p>
             <p>Email: {appt.email}</p>
-            <p>Description: {appt.description}</p>
+            <p>Appointment: {appt.appointment}</p>
             <p>Owner: {appt.owner}</p>
 
             <button className='buttons' onClick={() => { navigate(-1) }}>Back</button>
-        </>
+        </div>
       )}
     </div>
   )

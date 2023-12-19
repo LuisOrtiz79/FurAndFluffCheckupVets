@@ -13,7 +13,7 @@ const AddAppt = () => {
     date: "",
     phone: "",
     email: "",
-    description: "",
+    appointment: "",
     owner: ""
   })
 
@@ -29,11 +29,11 @@ const AddAppt = () => {
         name: newAppt.name,
         specie: newAppt.specie,
         gender: newAppt.gender,
+        time: newAppt.time,
         date: newAppt.date,
         phone: newAppt.phone,
         email: newAppt.email,
-        description: newAppt.description,
-        owner: newAppt.owner,
+        appointment: newAppt.appointment,
       })
       .then((response) => { 
         navigate('/');
@@ -42,10 +42,11 @@ const AddAppt = () => {
           name: "",
           specie: "",
           gender: "",
+          time: "",
           date: "",
           phone: "",
           email: "",
-          description: "",
+          appointment: "",
           owner: ""
         });
       })
@@ -82,8 +83,11 @@ const AddAppt = () => {
           </label>
 
           <label>
+            Time:
+            <input name='time' type='text' placeholder='Time' value={newAppt.time} onChange={handleTextInput} />
+
             Date:
-            <input name='date' type='text' placeholder='Date' value={newAppt.date} onChange={handleTextInput} />
+            <input name='date' type='text' placeholder='mm/dd/yy' value={newAppt.date} onChange={handleTextInput} />
           </label>
 
           <label>
@@ -97,8 +101,8 @@ const AddAppt = () => {
           </label>
 
           <label>
-            Description:
-            <select name='description' value={newAppt.description} onChange={handleTextInput} >
+            Appointment:
+            <select name='appointment' value={newAppt.appointment} onChange={handleTextInput} >
               <option value=''>-- None --</option>
               <option value='checkup'>Checkup</option>
               <option value='care'>Care</option>

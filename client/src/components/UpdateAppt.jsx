@@ -9,10 +9,11 @@ const UpdateAppt = () => {
     name: "",
     specie: "",
     gender: "",
+    time: "",
     date: "",
     phone: "",
     email: "",
-    description: "",
+    appointment: "",
     owner: ""
   });
 
@@ -52,10 +53,11 @@ const UpdateAppt = () => {
         name: editedAppt.name,
         specie: editedAppt.specie,
         gender: editedAppt.gender,
+        time: editedAppt.time,
         date: editedAppt.date,
         phone: editedAppt.phone,
         email: editedAppt.email,
-        description: editedAppt.description,
+        appointment: editedAppt.appointment,
         owner: editedAppt.owner,
       })
       .then((response) => {
@@ -79,8 +81,8 @@ const UpdateAppt = () => {
                   <div key={index}>
                     <div className='sticky-note'>
                         <h2>{appt.name}</h2>
-                        <p>{appt.description}</p>
-                        <p>{appt.date}</p>
+                        <p>{appt.appointment}</p>
+                        <p>{appt.time} {appt.date}</p>
 
                         <button id='buttons1' className='buttons' onClick={() => handleEdit(appt.id)}>Edit</button>
                     </div>
@@ -114,11 +116,14 @@ const UpdateAppt = () => {
                   <option value='female'>Female</option>
                 </select>
               </label>
-    
+
             <label>
-                Date
-                <input name='date' type='text' placeholder='New Date' value={editedAppt.date} onChange={handleTextInput} />
-            </label>
+              Time:
+              <input name='time' type='text' placeholder='Time' value={editedAppt.time} onChange={handleTextInput} />
+
+              Date:
+              <input name='date' type='text' placeholder='mm/dd/yy' value={editedAppt.date} onChange={handleTextInput} />
+          </label>
     
             <label>
                 Phone
@@ -131,8 +136,8 @@ const UpdateAppt = () => {
             </label>
     
             <label>
-                Description
-                <select name='description' value={editedAppt.description} onChange={handleTextInput} >
+                Appointment
+                <select name='appointment' value={editedAppt.appointment} onChange={handleTextInput} >
                     <option value=''>-- None --</option>
                     <option value='checkup'>Checkup</option>
                     <option value='care'>Care</option>
